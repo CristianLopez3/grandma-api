@@ -1,0 +1,15 @@
+@startuml
+
+Auto --> User
+
+class Auto {
+    +id
+    +model
+}
+
+class User {
+    +id
+    +name
+}
+
+@enduml

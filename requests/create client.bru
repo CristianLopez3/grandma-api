@@ -1,0 +1,26 @@
+meta {
+  name: create client
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:9091/clients
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "John Doe",
+    "document": "CC-1234567890",
+    "addresses": [
+      {
+        "street": "123 Main St",
+        "city": "Springfield",
+        "state": "IL",
+        "zipCode": "62701"
+      }
+    ]
+  }
+}
