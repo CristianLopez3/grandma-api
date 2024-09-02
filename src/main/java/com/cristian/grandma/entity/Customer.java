@@ -10,14 +10,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 import java.util.List;
 
-import static org.hibernate.annotations.CascadeType.*;
 
 @Data
 @Builder
@@ -27,7 +23,14 @@ import static org.hibernate.annotations.CascadeType.*;
 @AllArgsConstructor
 public class Customer extends BaseEntity {
 
+    @Column(nullable = false)
     private String name;
+
+    @Column(nullable = false, length = 11)
+    private String phone;
+
+    @Column(nullable = false, length = 50)
+    private String email;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "document_id", referencedColumnName = "id")
@@ -35,5 +38,15 @@ public class Customer extends BaseEntity {
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> addresses;
+
+    @Column(nullable = false)
+    private boolean isDeleted;
+
+    @PrePersist
+    private void prePersist() {
+        this.isDeleted = false;
+    }
+
+
 
 }

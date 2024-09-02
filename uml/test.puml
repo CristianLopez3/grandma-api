@@ -1,15 +1,27 @@
 @startuml
 
-Auto --> User
+BaseEntity <- User
+BaseEntity <- Document
+Document <- DocumentType
 
-class Auto {
-    +id
-    +model
+
+class BaseEntity {
+    -id
+}
+
+class Document {
+    -model
+    -DocumentType
 }
 
 class User {
-    +id
-    +name
+    -name
+}
+
+enum DocumentType {
+    -PDF
+    -DOC
+    -XLS
 }
 
 @enduml

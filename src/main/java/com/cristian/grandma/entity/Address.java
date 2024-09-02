@@ -17,7 +17,8 @@ public class Address extends BaseEntity {
     private String street;
     private String city;
     private String state;
-    private String zipCode;
+
+    private boolean isDeleted = Boolean.FALSE;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
