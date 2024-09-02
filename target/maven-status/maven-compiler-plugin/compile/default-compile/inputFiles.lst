@@ -1,0 +1,13 @@
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/GrandmaApplication.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/controller/ClientController.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/dto/AddressDto.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/dto/CustomerDto.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/dto/CustomerRequestDto.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/entity/Address.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/entity/BaseEntity.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/entity/Customer.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/entity/Document.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/entity/DocumentType.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/repository/CustomerRepository.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/repository/DocumentRepository.java
+/workspaces/grandma-api/src/main/java/com/cristian/grandma/service/CustomerServiceImpl.java
